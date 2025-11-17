@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "install": "^0.13.0",
+    "prompt-sync": "^4.2.0",
+    "save-dev": "^0.0.1-security"
+  }
+}
