@@ -26,6 +26,10 @@ export const getUserByName = (name: string ) => {
         console.log(user, "\n");
 }
 
+export const getAllUsers = () => {
+    console.log(users);
+}
+
 export const getActiveUsers = () => {
     const activeUsers = users.filter(u =>  u.isActive);
     if(activeUsers.length === 0){
@@ -68,8 +72,9 @@ export const menu = () => {
         console.log("------- MENU -------");
         console.log("1 - Adicionar novo usuário");
         console.log("2 - Buscar usuário pelo nome");
-        console.log("3 - Listar usuários ativos");
-        console.log("4 - Atualizar idade por ID");
+        console.log("3 - Listar todos os usuários");
+        console.log("4 - Listar usuários ativos");
+        console.log("5 - Atualizar idade por ID");
         console.log("0 - Sair");
         console.log("---------------------");
 
@@ -86,10 +91,14 @@ export const menu = () => {
         break;
 
         case '3':
+            getAllUsers();
+            break;
+
+        case '4':
             getActiveUsers();
         break;
 
-        case '4':
+        case '5':
             const id = parseInt(prompt("Digite o id: "));
             const age = parseInt(prompt("Digite o idade: "));
 
