@@ -1,5 +1,7 @@
 import type {User} from "./interfaces"
-const prompt = require("prompt-sync")({ sigint: true, eot: true });
+import promptSync from 'prompt-sync';
+
+const prompt = promptSync({ sigint: true, eot: true })
 
 let users: User[] = [
     { id: 1, name: "João", age: 25, isActive: true },
@@ -96,6 +98,10 @@ export const menu = () => {
 
             updateAgeById(id, age);
         break;
+
+        case '0':
+            console.log("Encerrando o sistema.");
+            break;
 
         default:    
             console.log("Opção inválida!\n");
