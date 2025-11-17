@@ -4,9 +4,11 @@ import promptSync from 'prompt-sync';
 const prompt = promptSync({ sigint: true, eot: true })
 
 let users: User[] = [
-    { id: 1, name: "João", age: 25, isActive: true },
-    { id: 2, name: "Lara", age: 25, isActive: true },
-    { id: 3, name: "Jose", age: 25, isActive: true },
+    { id: 1, name: "João", age: 27, isActive: true },
+    { id: 2, name: "Lara", age: 25, isActive: false},
+    { id: 3, name: "Jose", age: 21, isActive: true },
+    { id: 4, name: "Rodrigo", age: 29, isActive: false },
+    { id: 5, name: "Duf", age: 32, isActive: true },
 ];
 
 export const addUser = (user: User) => {
