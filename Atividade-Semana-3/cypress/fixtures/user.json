@@ -1,0 +1,20 @@
+{ 
+      "first_name": "Joao",
+      "last_name": "Carneiro",
+      "email": "joao@t2m.com",
+      "password": "12345",
+      "birth_day": "25",
+      "birth_month": "1",
+      "birth_year": "2000",
+      "company": "t2m",
+      "address": "rua de cima",
+      "address2": "rua de baixo",
+      "title": "1",
+      "country": "Canada",
+      "state": "Rio de Janeiro",
+      "city": "Petrópolis",
+      "zipcode": "25645100",
+      "mobile_number": "22480620"
+     
+
+}
