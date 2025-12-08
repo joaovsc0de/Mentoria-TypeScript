@@ -3,18 +3,21 @@
 import type { IUser } from "@/interfaces/iusers.js";
 import { faker } from '@faker-js/faker';
 
+//Deleta a conta do usuário
 Cypress.Commands.add('deleteAccount', () => {
         cy.get('[href="/delete_account"]').click();
         cy.get('[data-qa="account-deleted"]').should('be.visible');
         cy.get('[data-qa="continue-button"]').click();
 });
 
+//Verifica se está aparecendo o nome do usuário no header da página
 Cypress.Commands.add('verifyLoggedUser', (name: string) => {
         cy.get('header')
         .should('be.visible')
         .contains(`Logged in as ${name}`);
 });
 
+//Preenche o formulário da página signup e clica botão de criar a conta
 Cypress.Commands.add('createAccount', (userData: IUser) => {
         cy.get(`#id_gender${userData.title}`)
           .check()
@@ -91,6 +94,7 @@ Cypress.Commands.add('createAccount', (userData: IUser) => {
         cy.get('[data-qa="create-account"]').click();
 });
 
+//preenche nome e email e continua para a página de registro/signup
 Cypress.Commands.add('signup', (name: string, email: string) => {
         cy.get('[data-qa="signup-name"]')
           .type(name)
@@ -103,14 +107,17 @@ Cypress.Commands.add('signup', (name: string, email: string) => {
         cy.get('[data-qa="signup-button"]').click();
 });
 
+//navega pelos itens da navbar utilizando /página
 Cypress.Commands.add('navigate', (page: string) => {
         cy.get(`.nav.navbar-nav [href="${page}"]`).click();
 });
 
+//verifica se o seletor está visivel e contém o texto
 Cypress.Commands.add('verifyText', (seletor: string, text: string) => {
         cy.get(`${seletor}`).should('be.visible').contains(text);
 });
 
+//faz login
 Cypress.Commands.add('login', (email: string, password: string) => {
         cy.get('[data-qa="login-email"]')
           .type(email)
@@ -123,6 +130,7 @@ Cypress.Commands.add('login', (email: string, password: string) => {
         cy.get('[data-qa="login-button"]').click();
 });
 
+//gera um usuário utilizando faker
 Cypress.Commands.add('generateUser', () => {
         
         const countries = [
