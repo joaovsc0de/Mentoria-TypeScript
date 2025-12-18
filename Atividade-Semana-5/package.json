@@ -1,0 +1,25 @@
+{
+  "name": "atividade-3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "cy:run": "npx cypress run --config video=false --env allure=true",
+    "allure:clear": "if exist allure-results rmdir /s /q allure-results && if exist allure-report rmdir /s /q allure-report",
+    "allure:prepare": "copy allure\\categories.json allure-results\\categories.json",
+    "allure:generate": "allure generate allure-results --clean",
+    "allure:open": "allure open allure-report",
+    "test": "npx npm-run-all allure:clear cy:run allure:prepare allure:generate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@faker-js/faker": "^10.1.0",
+    "@shelex/cypress-allure-plugin": "^2.41.2",
+    "allure-commandline": "^2.36.0",
+    "cypress": "^15.7.0",
+    "typescript": "^5.9.3"
+  }
+}

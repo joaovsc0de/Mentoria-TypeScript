@@ -1,0 +1,7 @@
+"BROKEN","EPIC","FAILED","FEATURE","PASSED","SKIPPED","STORY","UNKNOWN"
+"0","Gestão de Usuários","0","Deletar Usuário","1","0","Deletar usuário com sucesso","0"
+"0","Gestão de Usuários","0","Login do Usuário","1","0","Deslogar usuário com sucesso","0"
+"0","Gestão de Usuários","0","Login do Usuário","1","0","Fazer Login com sucesso","0"
+"0","Gestão de Usuários","0","Login do Usuário","1","0","Falha ao fazer login com dados incorretos","0"
+"0","Gestão de Usuários","0","Cadastro de Usuário","1","0","Cadastrar usuários com dados inválidos/já existentes","0"
+"0","Gestão de Usuários","0","Cadastro de Usuário","1","0","Cadastrar usuário com dados válidos.","0"

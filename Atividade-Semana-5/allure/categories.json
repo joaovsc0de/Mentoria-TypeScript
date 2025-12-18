@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Erro de Ambiente",
+    "matchedStatuses": ["broken"],
+    "messageRegex": ".*ECONNREFUSED.*|.*503.*"
+  },
+  {
+    "name": "Timeout de Execução",
+    "matchedStatuses": ["failed", "broken"],
+    "messageRegex": ".*timed out.*|.*Timeout.*"
+  },
+  {
+    "name": "Falha de Asserção",
+    "matchedStatuses": ["failed"],
+    "messageRegex": ".*AssertionError.*|.*expected.*to equal.*"
+  },
+  {
+    "name": "Falha na Infrastrutura",
+    "messageRegex": ".*RuntimeException.*",
+    "matchedStatuses": ["broken"]
+  }
+]
